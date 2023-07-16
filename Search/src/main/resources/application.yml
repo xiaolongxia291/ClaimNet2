@@ -1,0 +1,5 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: http://es???ip:9200
+
