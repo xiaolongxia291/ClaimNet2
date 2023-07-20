@@ -14,6 +14,7 @@ import java.util.List;
 public class SearchServiceImpl implements SearchService{
     @Autowired
     ClaimRepository claimRepository;
+    @Autowired
     TextRepository textRepository;
 
     @Override
@@ -28,6 +29,7 @@ public class SearchServiceImpl implements SearchService{
 
     @Override
     public Claim buildTree(String id) {
+
         return claimRepository.findClaimById(id);
     }
 }

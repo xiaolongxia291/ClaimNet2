@@ -3,3 +3,7 @@ spring:
     rest:
       uris: http://es???ip:9200
 
+redis:
+  N: 1000
+  time: 60
+  access: 1000
