@@ -58,15 +58,22 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.4.1</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
+            <version>8.0.26</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.shyiko</groupId>
+            <artifactId>mysql-binlog-connector-java</artifactId>
+            <version>0.21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.12.4</version>
         </dependency>
         <!--PageHelper分页插件-->
         <dependency>
@@ -74,6 +81,12 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.4.4</version>
         </dependency>
+        <!-- binlog-->
+<!--        <dependency>-->
+<!--            <groupId>com.zendesk</groupId>-->
+<!--            <artifactId>mysql-binlog-connector-java</artifactId>-->
+<!--            <version>0.25.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

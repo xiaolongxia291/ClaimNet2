@@ -1,5 +1,6 @@
 package com.tracy.search.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -10,8 +11,9 @@ import java.io.Serializable;
 
 @Data
 @Document(indexName = "text",createIndex = false)
+@AllArgsConstructor
 public class Text implements Serializable {
-    Integer id_auto;//用于mysql的自增主键，便于增删改查管理
+    Long id_auto;//用于mysql的自增主键，便于增删改查管理
     @Id
     @Field(name = "id",type = FieldType.Text)
     String id;

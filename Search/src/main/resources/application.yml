@@ -12,6 +12,16 @@ spring:
     username: root
     password: 密码
 
+#mysql与redis同步需要的配置
+sync:
+  mysqlHost: localhost
+  mysqlPort: 3306
+  base: ClaimNet
+  table: text
+  esHost: ip
+  esPort: 9200
+  index: text
+
 # MyBatis-Plus的设置
 # 别名包扫描路径,为路径下的所有类创建别名
 mybatis-plus:
@@ -24,7 +34,6 @@ mybatis-plus:
     map-underscore-to-camel-case: on
     # 配置生成SQL日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
 
 # 自定义配置变量
 redis:
