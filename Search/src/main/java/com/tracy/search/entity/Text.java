@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Data
 @Document(indexName = "text",createIndex = false)
 public class Text implements Serializable {
+    Integer id_auto;//用于mysql的自增主键，便于增删改查管理
     @Id
     @Field(name = "id",type = FieldType.Text)
     String id;

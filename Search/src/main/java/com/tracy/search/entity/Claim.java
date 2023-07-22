@@ -17,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Claim implements Serializable {
+    Integer id_auto;//自增主键
     @Id
     @Field(name = "id",type = FieldType.Text)
     String id;
