@@ -2,8 +2,15 @@ spring:
   elasticsearch:
     rest:
       uris: http://es???ip:9200
+  redis:
+    host: 服务器ip
+    database: 0
+    port: 6379
 
+# 自定义配置变量
 redis:
   N: 1000
+  hotUser: 1000
+  hotKeyword: 1000
   time: 60
   access: 1000
