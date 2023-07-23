@@ -42,6 +42,3 @@ redis:
   hotKeyword: 1000
   time: 60
   access: 1000
-auth:
-  token_alive: 7200
-  secret_key: tracy

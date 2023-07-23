@@ -1,14 +1,20 @@
 package com.tracy.search.aop;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
+
+
+@Aspect
+@Component
 public class AnalysisAspect {
     @Resource
     RedisTemplate<String,Object> redisTemplate;
@@ -25,7 +31,7 @@ public class AnalysisAspect {
         uv_vv_update(user_ip);
     }
     //SearchController中的查询方法每被调用一次，热点词和热门用户就更新一次
-    @Before("execution(List<Text> com.tracy.search.controller.SearchController.*(..))")
+    @Before("execution(* com.tracy.search.controller.SearchController.*(..))")
     public void updateIndex2(JoinPoint joinPoint) {
         HttpServletRequest request=(HttpServletRequest)joinPoint.getArgs()[0];
         String user_ip=request.getRemoteAddr();

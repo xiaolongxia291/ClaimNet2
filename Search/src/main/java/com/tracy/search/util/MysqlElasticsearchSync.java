@@ -1,4 +1,4 @@
-package com.tracy.search.sync;
+package com.tracy.search.util;
 
 import java.io.IOException;
 import java.util.HashMap;
